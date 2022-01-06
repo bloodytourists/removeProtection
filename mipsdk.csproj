@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="3.1.9" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.FileExtensions" Version="3.1.9" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="3.1.9" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="3.1.9" />
+    <PackageReference Include="microsoft.identity.client" Version="4.18.0" />
+    <PackageReference Include="microsoft.informationprotection.file" Version="1.10.93" Condition="$([MSBuild]::IsOsPlatform('Windows'))" />         
+    <None Update="appsettings.json" CopyToOutputDirectory="PreserveNewest" />       
+  </ItemGroup> 
+</Project>
